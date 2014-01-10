@@ -3,7 +3,7 @@ Acceleo Maven
 
 Acceleo Maven compilation plugin. Tweaks on original plugin (released by Obeo) to enable registration of .ecore files for .mtl compilation.  
 
-Configuration: pom.xml
+Pom.xml Configuration
 ----------------------
 
 The Acceleo Maven must be added to project pom.xml
@@ -43,7 +43,7 @@ Plugin configuration is the same as the original Acceleo Maven Compilation plugi
 
 This snippet add the project root "my_directory" as a .ecore project container and more precisely the "src/main/java" project folder.
 
-Run the .mtl compilation
+Launche Project .mtl Compilation
 ------------------------
 
 Compilation is called by invoking the following maven call
