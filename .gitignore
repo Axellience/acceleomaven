@@ -2,6 +2,15 @@
 # Java paths #
 bin/
 
+# Eclipse dedicated files #
+target/
+.gwt/
+.settings/
+.classpath
+.project
+.metadata
+
+
 # Git files #
 *.orig
 
