@@ -185,15 +185,14 @@ public class AcceleoParserMojo extends AbstractMojo {
 
 		}
 		
-		this.ecoreImports.add(new EcoreImport(project.getBasedir(), ".")); // We add the project (could contain ecore files)
+		this.ecoreImports.add(new EcoreImport(project.getBasedir(), ".")); // We add the project by default (could contain ecore files)
 		for (EcoreImport ecoreImport : this.ecoreImports) {
 			log.info("Project " + ecoreImport.getRoot() + " is added to the mtl compilations");
 			if (!ecoreImport.getRoot().exists()) {
 				log.warn("project " + ecoreImport + " does not exist!");
 			} else {
 				log.info(" * scan folder(s) = " + ecoreImport.getInputs());
-				List<File> imports = ecoreImport.getEcores();
-				for (File imp : imports) {
+				for (File imp : ecoreImport.getEcores()) {
 					log.info(" registering '" + imp.getName() + "' (" + imp + ")");
 					AcceleoPackageRegistry.INSTANCE.registerEcorePackages(imp.getAbsolutePath(), new ResourceSetImpl());
 				}
