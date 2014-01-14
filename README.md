@@ -5,6 +5,7 @@ Acceleo Maven compilation plugin. Tweaks on original plugin (released by Obeo) t
 
 Installation
 ------------
+In `org.eclipse.acceleo.maven` folder, just use:
 ~~~
 mvn clean install
 ~~~
