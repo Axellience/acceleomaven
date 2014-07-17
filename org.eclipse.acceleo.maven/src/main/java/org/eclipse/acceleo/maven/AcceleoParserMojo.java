@@ -169,6 +169,9 @@ public class AcceleoParserMojo extends AbstractMojo {
 					if (nsURIInvoked instanceof String) {
 						log.info("Registering package '" + packageToRegister + "'.");
 						AcceleoPackageRegistry.INSTANCE.put((String) nsURIInvoked, eInstance.get(null));
+						if ("http://www.eclipse.org/uml2/4.0.0/UML".equals(nsURIInvoked)) {
+							AcceleoPackageRegistry.INSTANCE.put("http://www.eclipse.org/uml2/4.0.0/UML", eInstance.get(null));
+						}
 					} else {
 						log.error("The URI field is not a string.");
 					}
