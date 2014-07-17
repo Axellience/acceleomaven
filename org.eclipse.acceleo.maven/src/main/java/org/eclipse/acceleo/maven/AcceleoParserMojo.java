@@ -170,6 +170,7 @@ public class AcceleoParserMojo extends AbstractMojo {
 						log.info("Registering package '" + packageToRegister + "'.");
 						AcceleoPackageRegistry.INSTANCE.put((String) nsURIInvoked, eInstance.get(null));
 						if ("http://www.eclipse.org/uml2/4.0.0/UML".equals(nsURIInvoked)) {
+							log.info("Activating backward UML compatibility");
 							AcceleoPackageRegistry.INSTANCE.put("http://www.eclipse.org/uml2/4.0.0/UML", eInstance.get(null));
 						}
 					} else {
